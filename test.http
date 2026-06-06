@@ -1,0 +1,26 @@
+###
+GET http://localhost:4004/odata/v4/prd-managment/$metadata
+
+###
+GET http://localhost:4004/odata/v4/prd-managment/Products
+
+###
+POST http://localhost:4004/odata/v4/prd-managment/Products
+Content-Type: application/json
+
+{
+      "prdId": "APL106",
+      "name": "iPhone 17",
+      "description": "Apple smartphone",
+      "price": 80000,
+      "discount": 3,
+      "stock": 100
+}
+
+###
+PATCH http://localhost:4004/odata/v4/prd-managment/Products('APL106')
+Content-Type: application/json
+
+{
+    "discount":5
+}
