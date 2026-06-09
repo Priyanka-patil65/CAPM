@@ -17,5 +17,13 @@ service PrdManagmentService{
             else '3'
         end as statusCriticality: String
     }
+    actions{
+
+        @Common.SideEffects:{TargetProperties:['stock']}
+        action addStock(stock:Integer @Common.Label : 'Stock') returns String;
+
+        @Common.SideEffects:{TargetProperties:['discount']}
+        action applyDiscount(discount:Integer @Common.Label : 'Discount') returns String;
+    }
     
 }

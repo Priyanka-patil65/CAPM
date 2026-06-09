@@ -16,6 +16,10 @@ annotate service.Products with @(
         },
         {
             $Type : 'UI.DataField',
+            Value : price,
+        },
+        {
+            $Type : 'UI.DataField',
             Value : stock,
         },
         {
@@ -24,12 +28,18 @@ annotate service.Products with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : price,
-        },
-        {
-            $Type : 'UI.DataField',
             Value : status,
             Criticality : statusCriticality,
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'PrdManagmentService.addStock',
+            Label : 'AddStock',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'PrdManagmentService.applyDiscount',
+            Label : 'ApplyDiscount',
         },
     ],
     UI.HeaderInfo : {

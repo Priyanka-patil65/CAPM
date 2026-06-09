@@ -11,13 +11,16 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-prdmgmnt": "cds watch --open com.demo.prdmgmnt/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-prdmgmnt": "cds watch --open com.demo.prdmgmnt/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-ordermgmnt": "cds watch --open com.demo.ordermgmnt/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/prdmgmnt"
+    "app/prdmgmnt",
+    "app/ordermgmnt",
+    "app/ordermgmnt"
   ]
 }
